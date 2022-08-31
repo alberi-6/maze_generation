@@ -38,8 +38,8 @@ class Maze : public olc::PixelGameEngine {
     public:
         bool OnUserCreate() override {
             // Maze parameters
-            nMazeWidth = 40;
-            nMazeHeight = 25;
+            nMazeWidth = 80;
+            nMazeHeight = 50;
 
             maze = new int[nMazeWidth * nMazeHeight];
             memset(maze, 0x00, nMazeWidth * nMazeHeight * sizeof(int));
@@ -162,7 +162,7 @@ class Maze : public olc::PixelGameEngine {
 int main() {
     // Use olcPixelGameEngine derived app
     Maze game;
-    game.Construct(160, 100, 8, 8, false, true);
+    game.Construct(320, 200, 4, 4, false, true);
     game.Start();
 
     return 0;
