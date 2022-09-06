@@ -54,6 +54,9 @@ class Maze : public olc::PixelGameEngine {
         }
 
         bool OnUserUpdate(float fElapsedTime) override {
+            // Clear screen
+            FillRect(0, 0, ScreenWidth(), ScreenHeight(), olc::BLACK);
+
             auto offset = [&](int x, int y) {
                 return (m_stack.top().second + y) * nMazeWidth + (m_stack.top().first + x);
             };
